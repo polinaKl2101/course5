@@ -1,6 +1,5 @@
-import requests
+from user import user
 
-url = 'https://api.hh.ru/vacancies'
-r = requests.get(url)
-print(r.status_code)
+if __name__ == '__main__':
+    user()
 

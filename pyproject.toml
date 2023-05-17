@@ -9,6 +9,9 @@ readme = "README.md"
 python = "^3.9"
 requests = "^2.30.0"
 urllib3 = "1.26.6"
+psycopg2 = "^2.9.6"
+pandas = "^2.0.1"
+sqlalchemy = "^2.0.13"
 
 
 [build-system]
