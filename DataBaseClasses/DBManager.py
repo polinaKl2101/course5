@@ -51,13 +51,12 @@ class DataBaseManager:
                                       f'{self.__params["port"]}/{self.__db_name}')
 
         cursor = connection.cursor()
-        sql_query = """SELECT vacancy_title, AVG((salary_from + salary_to) / 2) AS avg_salary, url
+        sql_query = """SELECT AVG((salary_from + salary_to) / 2) AS avg_salary
                        FROM public.vacancies
-                       GROUP BY vacancy_title, url
-                       ORDER BY avg_salary DESC"""
+                       """
 
         cursor.execute(sql_query)
-        data = cursor.fetchall()
+        data = cursor.fetchone()
         return data
 
         cursor.close()
